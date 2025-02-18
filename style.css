@@ -1,0 +1,108 @@
+/* General Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Game Container */
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Title & Subtitle */
+h1 {
+    font-size: 26px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Buttons */
+.mode-select button {
+    margin: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mode-select button:hover {
+    background: #388E3C;
+    transform: scale(1.05);
+}
+
+/* Sudoku Grid */
+#game-board {
+    display: grid;
+    gap: 5px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* Sudoku Cells */
+.cell {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #000;
+    background: #fff;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Disabled Cells (Pre-filled Numbers) */
+.cell:disabled {
+    background: #ddd;
+    font-weight: bold;
+    border-color: #999;
+}
+
+/* Correct & Incorrect Answers */
+.correct {
+    background-color: #c8e6c9;
+    border-color: #388E3C;
+}
+
+.incorrect {
+    background-color: #ffcdd2;
+    border-color: #D32F2F;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .cell {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .mode-select button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

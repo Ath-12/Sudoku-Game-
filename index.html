@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Sudoku</h1>
+        <p class="subtitle">Select difficulty level to start the game</p>
+        <div class="mode-select">
+            <button onclick="startGame(5)">Easy (5x5)</button>
+            <button onclick="startGame(7)">Medium (7x7)</button>
+            <button onclick="startGame(9)">Hard (9x9)</button>
+        </div>
+        <div id="game-board"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
